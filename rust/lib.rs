@@ -4,7 +4,7 @@ extern crate errors;
 extern crate result;
 
 use core::ptr::copy;
-use errors::prelude::*;
+use errors::*;
 use result::Result;
 
 pub fn slice_copy<T: Copy>(src: &[T], dst: &mut [T], len: usize) -> Result<()> {
