@@ -1,14 +1,12 @@
 #![no_std]
 
-extern crate error;
+extern crate errors;
 extern crate result;
 
 use core::ptr::copy;
 use core::slice::{from_raw_parts, from_raw_parts_mut};
-use error::prelude::*;
+use errors::prelude::*;
 use result::Result;
-
-errors!(OutOfBounds);
 
 pub fn slice_copy<T: Copy>(src: &[T], dst: &mut [T], len: usize) -> Result<()> {
     if dst.len() < len || src.len() < len {
