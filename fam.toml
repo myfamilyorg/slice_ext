@@ -1,0 +1,4 @@
+[crate]
+	lib = "slice_ext"
+[deps]
+	result = { git = "https://github.com/myfamilyorg/result" }
